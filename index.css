@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.accordion {
+  width: 100%;
+  padding-inline: 15px;
+  border: 1px solid rgba(6, 110, 180, 0.404);
+  border-radius: 15px;
+}
+
+.accordion .accordion-item {
+  margin-bottom: 5px;
+}
+
+.accordion .accordion-item:not(:last-child) {
+  border-bottom: none;
+}
+
+.accordion .accordion-item .ai-head {
+  padding: 15px 5px;
+  font-size: 20px;
+  text-transform: capitalize;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion .accordion-item .ai-head i{
+  transition: 0.3s all;
+}
+
+.accordion .accordion-item.active .ai-head i{
+  transform: rotate(180deg);
+}
+
+.accordion .accordion-item .ai-head:hover {
+  padding: 15px 5px;
+  font-size: 20px;
+  text-transform: capitalize;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion .accordion-item:not(:last-child) .ai-head {
+  border-bottom: 1px solid rgb(226, 226, 226);
+  transition: 0.3s all;
+}
+
+.accordion .accordion-item.active .ai-head {
+  border-color: transparent;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion .accordion-item .ai-content {
+  padding-inline: 15px;
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s all;
+  background-color: rgba(23, 133, 223, 0.089);
+  border-radius: 15px;
+  line-height: 25px;
+}
+
+.accordion .accordion-item.active .ai-content {
+  padding-block: 15px;
+}
